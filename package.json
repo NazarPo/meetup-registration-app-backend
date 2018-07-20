@@ -1,0 +1,28 @@
+{
+  "name": "meetup-registration-app-backend",
+  "version": "0.1.0",
+  "description": "Backend side for MeetUp Registration App",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "interlink",
+    "meetup",
+    "registration",
+    "backend"
+  ],
+  "author": "Nazar Poshtarenko",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {
+    "cors": "^2.8.4",
+    "mongoose": "^5.2.4",
+    "multer": "^1.3.1",
+    "nodemon": "^1.18.3"
+  }
+}
