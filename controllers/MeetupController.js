@@ -1,4 +1,4 @@
-const Meetup = require('../models/MeetUp');
+const Meetup = require('../models/Meetup');
 
 class MeetupController {
     find() { return Meetup.find() }

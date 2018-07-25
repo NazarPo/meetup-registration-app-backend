@@ -4,6 +4,7 @@ function restfulRouter(controller) {
     const router = express.Router();
 
     router.post('/', (req, res) => {
+        console.log(req.body);
         controller.create(req.body)
             .then(d => res.json(d))
             .catch(err => res.status(500).json({error: err}))
@@ -16,7 +17,7 @@ function restfulRouter(controller) {
     });
 
     router.get('/:id', (req, res) => {
-        controller.findById(req.params.id)
+        controller.findOne({authId: req.params.id})
             .then(d => res.json(d))
             .catch(err => res.status(500).json({error: err}))
     });
@@ -28,7 +29,7 @@ function restfulRouter(controller) {
     });
 
     router.patch('/:id', (req, res) => {
-        controller.updateById(req.params.id, req.body)
+        controller.updateOne({authId: req.params.id}, req.body)
             .then(d => res.json(d))
             .catch(err => res.status(500).json({error: err}))
     });
