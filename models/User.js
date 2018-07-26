@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'), Schema = mongoose.Schema;
+
 const userSchema = mongoose.Schema({
     nickname: {type: String, required: true},
     authId: {type: String, required: true},

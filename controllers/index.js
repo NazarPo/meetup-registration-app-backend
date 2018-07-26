@@ -1,4 +1,4 @@
-const meetups = require('../controllers/MeetupController');
-const users = require('../controllers/UserController');
+const meetups = require('./meetups.controller');
+const users = require('./users.controllers');
 
 module.exports = { meetups, users }
